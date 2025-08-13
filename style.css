@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: white;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #0f3460;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.conteudo img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+h2, h3 {
+    color: #e94560;
+}
+
+.quiz {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+button {
+    background-color: #e94560;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff2e63;
+    transform: scale(1.05);
+}
+
+#opcoes button {
+    display: block;
+    margin: 5px 0;
+    width: 100%;
+}
+
+#opcoes button.recomecar {
+    background-color: #1abc9c;
+}
+
+#opcoes button.recomecar:hover {
+    background-color: #16a085;
+}
