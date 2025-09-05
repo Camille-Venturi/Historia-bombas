@@ -1,53 +1,126 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset */
+* {
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #1a1a2e, #16213e);
-    color: white;
-    line-height: 1.6;
+    box-sizing: border-box;
 }
 
+/* Estilo geral */
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #f1f1f1;
+    line-height: 1.7;
+    scroll-behavior: smooth;
+}
+
+/* Cabeçalho */
 header {
-    background-color: #0f3460;
-    padding: 20px;
-    text-align: center;
+    background: rgba(15, 52, 96, 0.9);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+}
+
+header .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
-    margin: 0;
+    font-size: 1.4rem;
 }
 
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #e94560;
+}
+
+/* Conteúdo principal */
 main {
-    padding: 20px;
-    max-width: 900px;
+    padding: 40px 20px;
+    max-width: 1100px;
     margin: auto;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.07);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s, background 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+h2 {
+    color: #e94560;
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin-top: 20px;
+    color: #ff5f7e;
 }
 
 .conteudo img {
     max-width: 100%;
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin: 15px 0;
 }
 
-h2, h3 {
-    color: #e94560;
+/* Timeline */
+.timeline {
+    border-left: 3px solid #e94560;
+    padding-left: 20px;
 }
 
+.timeline .event {
+    margin: 15px 0;
+    position: relative;
+}
+
+.timeline .event span {
+    font-weight: bold;
+    color: #ffd369;
+}
+
+/* Quiz */
 .quiz {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 30px;
+    text-align: center;
 }
 
 button {
     background-color: #e94560;
     color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding: 12px 18px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 1rem;
+    margin-top: 10px;
     transition: 0.3s ease;
 }
 
@@ -58,8 +131,9 @@ button:hover {
 
 #opcoes button {
     display: block;
-    margin: 5px 0;
+    margin: 10px auto;
     width: 100%;
+    max-width: 400px;
 }
 
 #opcoes button.recomecar {
@@ -68,4 +142,28 @@ button:hover {
 
 #opcoes button.recomecar:hover {
     background-color: #16a085;
+}
+
+/* Footer */
+footer {
+    background: #0f3460;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* Animações suaves */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
